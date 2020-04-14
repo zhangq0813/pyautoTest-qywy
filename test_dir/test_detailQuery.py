@@ -31,7 +31,7 @@ class Test_detailQuery:
         sleep(1)
         lv = detailQueryPage.firstPage_yearlv_text.text
         strlv = "".join(lv)
-        assert strlv.split('%')=='0.35'
+        assert strlv.split('%')='0.35'
         #assert float(strlv.split('%'))/100 > 0
 
 if __name__ == "__main__":
