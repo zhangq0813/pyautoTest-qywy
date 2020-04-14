@@ -17,7 +17,7 @@ class Test_transLimitSet:
 
     def test_transLimitSet_case(self, browser, base_url):
         """
-        名称：转账明细查询
+        名称：转账明细查询1
         步骤：
         1、打开浏览器,输入测试网址
         2、点击转账菜单按钮，跳转到转账录入页面
