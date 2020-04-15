@@ -8,8 +8,12 @@ class BasePage(Page):
                                         describe="确定按钮")
 
     '''菜单按钮'''
-    menu_transfer_button = PageElement(xpath="//li[@href='#/Transfer']", describe="转账菜单")
-    menu_account_button = PageElement(xpath="//li[@href='#/AccountManage/AccountQry']",describe="账户菜单")
+    menu_transfer_button = PageElement(xpath="//li[@href='#/Transfer']", describe="转账汇款菜单")
+    menu_account_button = PageElement(xpath="//li[@href='#/AccountManage/AccountQry']",describe="账户信息菜单")
+    menu_batch_button = PageElement(xpath="//li[@href='#/BatchBusinessManage/RosterManager']", describe="批量业务菜单")
+    menu_wsbao_button = PageElement(xpath="//li[@href='#/WSBao']", describe="余利宝菜单")
+    menu_bills_button = PageElement(xpath="//li[@href='#/BillsManage/BillsQry']", describe="工单管理菜单")
+    menu_membermanager_button = PageElement(xpath="//li[@href='#/MemberManage/CompanyInfo']", describe="会员中心菜单")
 
     '''#####页面对象#####'''
     '''首页'''
