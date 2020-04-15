@@ -10,6 +10,10 @@ class BasePage(Page):
     '''菜单按钮'''
     menu_transfer_button = PageElement(xpath="//li[@href='#/Transfer']", describe="转账菜单")
     menu_account_button = PageElement(xpath="//li[@href='#/AccountManage/AccountQry']",describe="账户菜单")
+    menu_batch_button = PageElement(xpath="//li[@href='#/AccountManage/AccountQry']", describe="批量业务菜单")
+    menu_account_button = PageElement(xpath="//li[@href='#/AccountManage/AccountQry']", describe="账户菜单")
+    menu_account_button = PageElement(xpath="//li[@href='#/AccountManage/AccountQry']", describe="账户菜单")
+    menu_account_button = PageElement(xpath="//li[@href='#/AccountManage/AccountQry']", describe="账户菜单")
 
     '''#####页面对象#####'''
     '''首页'''

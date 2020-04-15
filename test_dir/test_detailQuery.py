@@ -30,9 +30,9 @@ class Test_detailQuery:
         detailQueryPage.firstPage_accountmenu_button.click()
         sleep(1)
         lv = detailQueryPage.firstPage_yearlv_text.text
-        strlv = "".join(lv)
-        assert strlv.split('%')='0.35'
-        #assert float(strlv.split('%'))/100 > 0
+        strlv = "".join(lv.split("%"))  #以%分割字符串成列表，然后重新组合成新字符串，中间用空字符连接
+        #assert strlv =='0.35'
+        assert float(strlv) > 0
 
 if __name__ == "__main__":
     pytest.main(['-v','-s','test_detailQuery.py'])
