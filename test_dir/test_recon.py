@@ -48,22 +48,18 @@ class Test_reconciliation:
         #reconciliationPage.secondPage_endDate_table_button.click()
         reconciliationPage.secondPage_query_button.click()
         sleep(1)
-        #lista = browser.find_elements_by_class_name("dft margL20 cyan")
-        #lista = reconciliationPage.list_dolinks
-        #txt = lista[0].getattribute("data-mtr-brsym")
-        #txt1 = lista[0].get_attribute("data-mtr-brsym")
-        '''
+        lista = browser.find_elements_by_class_name("dft margL20 cyan")
         for dolink in lista:
-            if dolink.get_attribute("data-mtr-brsym") == '201601' and dolink.get_attribute(
+            if dolink.__getattribute__("data-mtr-brsym") == '201601' and dolink.__getattribute__(
                         "data-mtr-brs-status") == '03':
                 dolink.click()
 
         '''
-        '''
+        sleep(1)
         for dolink in reconciliationPage.list_dolinks:
             try:
-                if dolink.get_attribute("data-mtr-brsym") == '201601' and dolink.get_attribute(
-                        "data-mtr-back-status") == '04':
+                if dolink.__getattribute__("data-mtr-brsym") == '201601' and dolink.__getattribute__(
+                        "data-mtr-brs-status") == '03':
                     dolink.click()
                     hl = browser.current_window_handle
                     handles = browser.window_handles
@@ -78,23 +74,7 @@ class Test_reconciliation:
                     print("未查找到dolink对象")
         '''
 
-        for dolink in reconciliationPage.list_dolinks:
-            if dolink.get_attribute("data-mtr-brsym") == '201601' and dolink.get_attribute(
-                    "data-mtr-back-status") == '04' and dolink.text =='查看明细':
-                dolink.click()
-                hl = browser.current_window_handle
-                handles = browser.window_handles
-                for handle in handles:
-                    if handle != hl:
-                        browser.switch_to_window(handle)
-                        sleep(1)
-                        assert reconciliationPage.resultPage_msg.text == '2016年01月电子对账单'
-                    break
-            else:
-                 print("未查找到dolink对象")
-
-
 
 if __name__ == '__main__':
-    pytest.main(["-v", "-s", "test_reconciliation.py"])
+    pytest.main(["-v", "-s", "test_transLimitSet.py"])
     #Test_reconciliation.test_reconciliation_case()

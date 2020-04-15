@@ -34,7 +34,8 @@ class ReconciliationPage(Page):
     secondPage_query_button = PageElement(xpath="//*[@data-reactid='.0.0.0.1.1.0.1.0.0.0.1.1.0']", describe="查询")
 
     '''同属性元素list'''
-    list_dolinks = PageElements(class_name="dft margL20 cyan", describe="操作按钮")
+    #list_dolinks = PageElements(class_name="dft margL20 cyan", describe="操作按钮")
+    list_dolinks = PageElements(xpath="//a[@class='dft margL20 cyan']", describe="操作按钮")
 
     '''结果页面'''
     resultPage_msg = PageElement(xpath="//*[@data-reactid='.0.0.0.1.0.0.0.0.0']", describe="反显信息")
