@@ -88,8 +88,10 @@ class Test_reconciliation:
                     if handle != hl:
                         browser.switch_to_window(handle)
                         sleep(1)
+                        print("成功跳转")
                         assert reconciliationPage.resultPage_msg.text == '2016年01月电子对账单'
-                    break
+                        break
+                break
             else:
                  print("未查找到dolink对象")
 
