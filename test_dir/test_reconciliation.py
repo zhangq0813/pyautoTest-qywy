@@ -12,7 +12,7 @@ from page.reconciliation_page import ReconciliationPage
 
 
 class Test_reconciliation:
-    """百度搜索"""
+    """电子对账"""
 
     def test_reconciliation_case(self, browser, base_url):
         """
@@ -40,22 +40,24 @@ class Test_reconciliation:
 
         reconciliationPage.firstPage_reconciliation_link.click()
         sleep(1)
-        '''遍历验证下拉框中值'''
-        '''
-        reconciliationPage.secondPage_reconciliation_select.click()
-        reconciliationPage.secondPage_reconciliation_select_indexs[1].click()
-        reconciliationPage.secondPage_query_button.click()
-        sleep(2)
-       '''
-        reconciliationPage.secondPage_reconciliation_select.click()
-        reconciliationPage.secondPage_reconciliation_select_indexs[0].click()
-        sleep(2)
-        #xlerts = browser.find_elements_by_xpath("//li[@role='menuitem']")  #列表定位成功
-        #xlerts[1].click()
 
+        '''奇葩问题，先选下拉框再选日期框就报错，先选日期框再选下拉框正常'''
         reconciliationPage.secondPage_startDate_button.click()
         sleep(1)
         reconciliationPage.secondPage_startDate_table_button.click()
+
+        '''遍历验证下拉框中值'''
+        reconciliationPage.secondPage_reconciliation_select.click()
+        reconciliationPage.secondPage_reconciliation_select_indexs[1].click()
+        reconciliationPage.secondPage_query_button.click()
+        sleep(1)
+        reconciliationPage.secondPage_reconciliation_select.click()
+        reconciliationPage.secondPage_reconciliation_select_indexs[0].click()
+        sleep(1)
+        #xlerts = browser.find_elements_by_xpath("//li[@role='menuitem']")  #列表定位成功
+        #xlerts[1].click()
+
+
         #reconciliationPage.secondPage_endDate_button.click()
         #reconciliationPage.secondPage_endDate_table_button.click()   #页面按钮本身不可用
         reconciliationPage.secondPage_query_button.click()
