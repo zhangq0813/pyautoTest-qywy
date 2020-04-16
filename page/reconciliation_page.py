@@ -23,10 +23,14 @@ class ReconciliationPage(Page):
     '''对账页'''
     secondPage_reconciliation_select = PageElement(xpath="//*[@data-reactid='.0.0.0.1.1.0.1.0.0.0.0.1.1.$selection.0']",
                                              describe="对账类型")
+    secondPage_reconciliation_select_indexs = PageElements(xpath="//li[@role='menuitem']",describe="对账类型列表")
+
+
     secondPage_startDate_button = PageElement(xpath="//input[@data-reactid='.0.0.0.1.1.0.1.0.0.0.1.0.1.0.$=10']",
                                               describe="起始时间")
-    secondPage_startDate_table_button = PageElement(xpath="/html/body/div[7]/div/div/div[2]/table/tbody/tr[1]/td[5]/span",
-                                                     describe="2016-1-1")
+    secondPage_startDate_table_button = PageElement(xpath="/html/body/div[7]/div/div/div[2]/table/tbody/tr[1]/td[6]/span",
+                                                     describe="2016-1-2")
+
     secondPage_endDate_button = PageElement(xpath="//input[@data-reactid='.0.0.0.1.1.0.1.0.0.0.1.0.3.0.$=10']",
                                               describe="结束时间")
     secondPage_endDate_table_button = PageElement(xpath="/html/body/div[8]/div/div/div[2]/table/tbody/tr[2]/td[4]/span",
