@@ -22,7 +22,7 @@ class WsbaoTransInPage(Page):
 
 
     '''录入页'''
-    secondPage_wsbaotransin_input = PageElement(xpath="//*[@data-reactid='.0.0.0.1.1.0.1.0.1.0.0.$/=11.$/=12.$/=11.0']"
+    secondPage_wsbaotransin_input = PageElement(xpath="//*[@data-reactid='.0.0.0.1.1.0.1.0.1.0.0.$/=11.$/=12.$/=11.0.$/=10']"
                                          , describe="转入金额")
     secondPage_wsbaotransin_output = PageElement(xpath="//*[@data-reactid='.0.0.0.1.1.0.1.0.1.0.0.$/=11.$/=13.$/=11.0']", describe="大写金额")
     secondPage_nextn_button = PageElement(xpath="//input[@data-reactid='.0.0.0.1.1.0.1.0.1.0.0.$/=12.$/=10']", describe="下一步")

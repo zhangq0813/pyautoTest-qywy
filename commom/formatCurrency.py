@@ -44,6 +44,7 @@ def formatCurrency(currencyDigits):
         decimal=decimal[0:2]
         if decimal=="0" or decimal=="00":
             decimal=""
+
     else:
         integral=parts[0]
         decimal=""

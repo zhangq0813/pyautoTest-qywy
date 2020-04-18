@@ -47,9 +47,9 @@ class Test_wsbaoTransIn:
         sleep(1)
 
         WebDriverWait(browser, 10).until(
-            EC.visibility_of_element_located((By.XPATH, "//*[@data-reactid='.0.0.0.1.1.0.1.0.1.0.0.$/=11.$/=12.$/=11.0']")))
+            EC.visibility_of_element_located((By.XPATH, "//*[@data-reactid='.0.0.0.1.1.0.1.0.1.0.0.$/=11.$/=12.$/=11.0.$/=10']")))
 
-        wsbaoTransInPage.secondPage_wsbaotransin_input.send_keys('1000')
+        wsbaoTransInPage.secondPage_wsbaotransin_input.send_keys(inputMon)
         sleep(1)
         assert wsbaoTransInPage.secondPage_wsbaotransin_output.text == formatCurrency(inputMon)
         wsbaoTransInPage.secondPage_nextn_button.click()
