@@ -44,10 +44,13 @@ class Test_wsbaoTransIn:
         sleep(1)
 
         wsbaoTransInPage.firstPage_wsbaotransin_link.click()
-        sleep(1)
-
+        #sleep(3)
+        '''
         WebDriverWait(browser, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//*[@data-reactid='.0.0.0.1.1.0.1.0.1.0.0.$/=11.$/=12.$/=11.0.$/=10']")))
+        '''
+        WebDriverWait(browser, 10).until(
+            EC.visibility_of(wsbaoTransInPage.secondPage_wsbaotransin_input))
 
         wsbaoTransInPage.secondPage_wsbaotransin_input.send_keys(inputMon)
         sleep(1)
