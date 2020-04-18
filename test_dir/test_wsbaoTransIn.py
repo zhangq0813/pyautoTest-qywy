@@ -54,7 +54,10 @@ class Test_wsbaoTransIn:
 
         wsbaoTransInPage.secondPage_wsbaotransin_input.send_keys(inputMon)
         sleep(1)
-        assert wsbaoTransInPage.secondPage_wsbaotransin_output.text == formatCurrency(inputMon)
+        inputMoneyAct = wsbaoTransInPage.secondPage_wsbaotransin_output.text
+        inputMoneyResp = formatCurrency(inputMon)
+        assert inputMoneyAct == inputMoneyResp
+        #assert wsbaoTransInPage.secondPage_wsbaotransin_output.text == formatCurrency(inputMon)
         wsbaoTransInPage.secondPage_nextn_button.click()
         sleep(1)
 
