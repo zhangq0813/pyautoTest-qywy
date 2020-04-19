@@ -1,6 +1,6 @@
 """
 @author:  张强
-@data: 2020-4-13
+@data: 2020-4-19
 """
 from time import sleep
 import sys
@@ -75,10 +75,10 @@ class Test_test_peerTransfer:
         yhwdlist = interBankTransferPage.secendPage_yhwdkeyvalue_indexs
         try:
             len(yhwdlist) > 0
-            for i in range(0,len(yhwdlist)):
-                if "杭州市城东支行" in yhwdlist[i].text:
-                    yhwdlist[i].click()
-                    exceptvalue = yhwdlist[i].text  #必须再下面操作步骤之前，下面步骤点击后会跳出当前页面，如果再执行会导致获取不到值
+            for j in range(0,len(yhwdlist)):
+                if "杭州市城东支行" in yhwdlist[j].text:
+                    yhwdlist[j].click()
+                    exceptvalue = yhwdlist[j].text  #必须再下面操作步骤之前，下面步骤点击后会跳出当前页面，如果再执行会导致获取不到值
                     interBankTransferPage.secendPage_yhwdsure_button.click()
                     #print(exceptvalue)
                     break
@@ -96,19 +96,22 @@ class Test_test_peerTransfer:
         interBankTransferPage.firstPage_trsamount_index.click()
         sleep(1)
         ytlists = interBankTransferPage.firstPage_trsamount_indexs
-        ytlists[1].click()
-        '''
-        for i in range(0,len(ytlists)):
-            if "往来款" in ytlists[i].text:
-                ytlists[i].click()
+        #ytlists[4].click()
+        '''如果k改成上面的i会导致ytlists变量只能定位到前3个对象，而定位不到后面的，如果定义k，则全部能取到'''
+        for k in range(0,len(ytlists)):
+            if "往来款" in ytlists[k].text:
+                ytlists[k].click()
                 break
-        '''
-        sleep(1)
+
         interBankTransferPage.firstPage_next_button.click()
+        sleep(1)
+        '''验证码校验页面'''
+        interBankTransferPage.thirdPage_verifycode_button.click()
+        interBankTransferPage.thirdPage_verifycode_input.send_keys("123456")
+        interBankTransferPage.sthirdPage_confirm_button.click()
+        sleep(1)
 
-
-
-
+        assert '单笔转账录入成功' in interBankTransferPage.confirmPage_return_msg.text
 
 
 if __name__ == '__main__':

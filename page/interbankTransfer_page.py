@@ -36,9 +36,9 @@ class InterBankTransferpage(Page):
 
                                          
     '''转账确认页面'''
-    secondPage_verifycode_button = PageElement(xpath="//input[@data-seed='get_verify_code']",describe="获取验证码")
-    secondPage_verifycode_input = PageElement(xpath="//input[@placeholder='请输入验证码']",describe="验证码输入框")
-    secondPage_confirm_button = PageElement(xpath="//*[@value='确定']",describe="确定按钮")
+    thirdPage_verifycode_button = PageElement(xpath="//input[@data-seed='get_verify_code']",describe="获取验证码")
+    thirdPage_verifycode_input = PageElement(xpath="//input[@placeholder='请输入验证码']",describe="验证码输入框")
+    sthirdPage_confirm_button = PageElement(xpath="//*[@value='确定']",describe="确定按钮")
 
     '''结果页'''
-    confirmPage_return_button = PageElement(xpath="//input[@data-reactid='.0.0.0.1.1.0.1.0.1.1.0']",describe="返回按钮")
+    confirmPage_return_msg = PageElement(xpath="//*[@data-reactid='.0.0.0.1.1.0.1.0.1.0.1.1']",describe="反显信息")
