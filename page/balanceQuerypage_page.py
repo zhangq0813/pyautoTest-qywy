@@ -1,6 +1,6 @@
 from poium import Page,PageElement,PageElements
 
-class Detailquerypage(Page):
+class BalanceQuerypage(Page):
 
 
     firstPage_alert = PageElement(xpath="/html/body/div[6]/div/span/div",describe = "电子对账提示框")

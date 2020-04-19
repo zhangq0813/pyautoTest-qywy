@@ -4,11 +4,11 @@ import sys
 from os.path import dirname, abspath
 
 sys.path.insert(0, dirname(dirname(abspath(__file__))))
-from page.detailQuery_page import Detailquerypage
+from page.balanceQuerypage_page import BalanceQuerypage
 
-class Test_detailQuery:
+class Test_balanceQuery:
 
-    def test_detailquery_case(self,browser,base_url):
+    def test_balanceQueryy_case(self,browser,base_url):
         """
         名称：账户余额查询
         步骤：
@@ -18,22 +18,22 @@ class Test_detailQuery:
         断言：
         检查页面中年利率是否反显年利率且大于0
         """
-        detailQueryPage = Detailquerypage(browser)
-        detailQueryPage.get(base_url)
+        balanceQueryPage = BalanceQuerypage(browser)
+        balanceQueryPage.get(base_url)
         sleep(2)
-        if not detailQueryPage.firstPage_alert:
+        if not balanceQueryPage.firstPage_alert:
             print('调试信息！')
-            detailQueryPage.firstPage_sure_button.click()
+            balanceQueryPage.firstPage_sure_button.click()
         else:
             print('go on!')
-
-        detailQueryPage.firstPage_accountmenu_button.click()
         sleep(1)
-        lv = detailQueryPage.firstPage_yearlv_text.text
+        balanceQueryPage.firstPage_accountmenu_button.click()
+        sleep(1)
+        lv = balanceQueryPage.firstPage_yearlv_text.text
         strlv = "".join(lv.split("%"))  #以%分割字符串成列表，然后重新组合成新字符串，中间用空字符连接
         #assert strlv =='0.35'
         assert float(strlv) > 0
 
 if __name__ == "__main__":
-    pytest.main(['-v','-s','test_detailQuery.py'])
+    pytest.main(['-v','-s','test_balanceQuery.py'])
 
