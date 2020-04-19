@@ -69,6 +69,7 @@ class Test_reconciliation:
                     "data-mtr-back-status") == '04' and dolink.text =='查看明细':
                 dolink.click()
                 hl = browser.current_window_handle
+
                 handles = browser.window_handles
                 for handle in handles:
                     if handle != hl:
