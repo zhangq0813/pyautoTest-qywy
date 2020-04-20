@@ -21,18 +21,9 @@ class ImportUpdatePage(Page):
     '''设置页'''
     secondPage_dialogUpload_button = PageElement(xpath="//*[@data-seed='roster_up_fild_upload']", describe="文件上传")
 
-    '''录入页'''
-    thirdPage_alimit_input = PageElement(xpath="//input[@data-reactid='.0.0.0.1.1.0.1.0.0.0.1.0.0.0.$/=14.$/=11.0.$/=10']", describe="单笔限额")
-    thirdPage_daylimit_input = PageElement(xpath="//input[@data-reactid='.0.0.0.1.1.0.1.0.0.0.1.0.0.0.$/=15.$/=11.0.$/=10']", describe="日累计限额")
-    thirdPage_yearlimit_input = PageElement(xpath="//input[@data-reactid='.0.0.0.1.1.0.1.0.0.0.1.0.0.0.$/=16.$/=11.0.$/=10']", describe="月累计限额")
-    thirdPage_next_button = PageElement(xpath="//input[@data-reactid='.0.0.0.1.1.0.1.0.0.0.1.0.0.0.$/=17.$/=10']", describe="下一步")
-    #thirdPage_next_button = PageElement(xpath="//input[@value='下一步']", describe="下一步")
-
-    '''限额确认页面'''
-    msurePage_verifycode_button = PageElement(xpath="//input[@data-seed='get_verify_code']", describe="获取验证码")
-    msurePage_verifycode_input = PageElement(xpath="//input[@placeholder='请输入验证码']", describe="验证码输入框")
-    msurePage_confirm_button = PageElement(xpath="//*[@value='下一步']", describe="确定按钮")
+    secondPagee_next_button = PageElement(xpath="//*[@value='下一步']", describe="下一步按钮")
 
     '''结果页'''
-    result_msg = PageElement(xpath="//span[@data-reactid='.0.0.0.1.1.0.1.0.0.0.1.0.1.1']", describe="成功提示信息")
+    result_msg = PageElement(xpath="//*[@id='sucessDlg']/div[2]/div[2]/div/span", describe="成功提示信息")
+    result_sure_button = PageElement(xpath="//*[@id='sucessDlg']/div[2]/div[3]/input", describe="知道了按钮")
 
