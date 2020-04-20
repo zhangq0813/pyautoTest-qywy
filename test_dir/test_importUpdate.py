@@ -44,7 +44,7 @@ class Test_importUpdate:
         '''打开文件上传窗体'''
         importUpdatePage.secondPage_dialogUpload_button.click()
         sleep(1)
-        system(r"C:\Users\Zhangq\PycharmProjects\pyautoTest-qywy\win32\dialogUpload.exe")
+        system(r"D:\自动化测试\pytest-yt-qywy\win32\dialogUpload.exe")
         sleep(1)
         importUpdatePage.secondPagee_next_button.click()
         sleep(1)
