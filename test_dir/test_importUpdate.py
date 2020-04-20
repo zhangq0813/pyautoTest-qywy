@@ -48,7 +48,7 @@ class Test_importUpdate:
         sleep(1)
         importUpdatePage.secondPagee_next_button.click()
         sleep(1)
-        assert importUpdatePage.result_msg.text == '更新名册成功'
+        assert importUpdatePage.result_msg.text == '更新名册成功1'
         importUpdatePage.result_sure_button.click()
 
 if __name__ == '__main__':
