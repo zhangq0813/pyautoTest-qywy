@@ -13,11 +13,11 @@ from page.importUpdate_page import ImportUpdatePage
 
 
 class Test_importUpdate:
-    """交易明细查询"""
+    """交批量代发-导入更新"""
 
     def test_importUpdate_case(self, browser, base_url):
         """
-        名称：交易明细查询
+        名称：批量代发-导入更新
         步骤：
         1、打开浏览器,输入测试网址
         2、点击转账菜单按钮，跳转到转账录入页面
