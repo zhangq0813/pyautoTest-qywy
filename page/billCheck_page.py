@@ -32,4 +32,4 @@ class BillCheckPage(Page):
     secondPage_next_button = PageElement(xpath="//*[@value='确定']", describe="确定")
 
     '''结果页面'''
-    thirdPage_result_msg = PageElement(xpath="//*@[class='darkgrey font22']",describe="反显信息")
+    thirdPage_result_msg = PageElement(xpath="//*[@id='content']/div[2]/span/div",describe="反显信息")

@@ -52,8 +52,6 @@ class Test_billCheck:
         #billCheckPage.firstPage_check_list[1].click()
         #billCheckPage.firstPage_check_list[3].click()
 
-
-
         '''切换窗体'''
         hl = browser.current_window_handle
         handles = browser.window_handles
