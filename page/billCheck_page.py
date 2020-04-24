@@ -27,7 +27,7 @@ class BillCheckPage(Page):
     secondPage_rejecttxt_index = PageElement(xpath="//*[@placeholder='请输入拒绝原因']", describe="拒绝原因")
 
     '''验证码验证页面'''
-    secondPage_verifycode_button = PageElement(xpath="//input[@data-seed='get_verify_code']", describe="获取验证码")
+    secondPage_verifycode_button = PageElement(xpath="//input[@data-seed='get_ve    rify_code']", describe="获取验证码")
     secondPage_verifycode_input = PageElement(xpath="//input[@placeholder='请输入验证码']", describe="验证码输入框")
     secondPage_next_button = PageElement(xpath="//*[@value='确定']", describe="确定")
 
