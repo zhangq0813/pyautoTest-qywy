@@ -27,11 +27,13 @@ class OperatorModifyPage(Page):
     '''下属方法定位正确'''
     #secondPage_inline_checkbox = PageElements(xpath="//label/span[starts-with(@class,'ant-checkbox')]", describe="基础权限")
     secondPage_inline_checkbox = PageElements(xpath="//label/span[contains(@class,'ant-checkbox')]", describe="基础权限")
-    '''ends-with'''
+    '''ends-with不对'''
     #secondPage_inline_checkbox = PageElements(xpath="//label/span[ends-with(@class,'ant-checkbox')]", describe="基础权限")
 
-    secondPage_ant_switch = PageElement(xpath="//*[@class='ant-switch']", describe="银企直联开关")
-    secondPage_tree_checkbox = PageElements(xpath="//*[@class='ant-tree-checkbox-inner']", describe="银企直联开关")
+    secondPage_ant_switch = PageElement(xpath="//*[@class='ant-switch-inner']", describe="银企直联开关")
+    '''获取得是4个主复选框'''
+    #secondPage_tree_checkbox = PageElements(xpath="//ul[@class='ant-tree']/li/a", describe="账户权限")
+    secondPage_tree_checkbox = PageElements(xpath="//ul[@class='ant-tree']/li/a", describe="账户权限")
 
 
 

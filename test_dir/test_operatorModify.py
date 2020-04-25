@@ -59,37 +59,23 @@ class Test_operatorModify:
         if inlinelist[1].get_attribute("class") != 'ant-checkbox':
             inlinelist[1].click()
 
+        '''银企直联开关'''
+        if operatorModifyPage.secondPage_ant_switch.text == '关':
+            operatorModifyPage.secondPage_ant_switch.click()
 
+        '''账户权限'''
+        trees = operatorModifyPage.secondPage_tree_checkbox
+        listtree =['账户查询','批量代发','批量查询']
+        '''
+        for i in range(0,len(listtree)):
+            for j in range(0,trees):
+                #if listtree[i] ==
 
         status = inlinelist[0].is_selected()
         status1 = inlinelist[1].is_selected()
         #status2 = inlinelist[2].is_selected()
-
+        '''
         sleep(1)
-        billCheckPage.firstPage_billcheck_button.click()
-        sleep(1)
-        '''下面操作错误，list[1]操作后，共有属性变化，原来list[3]会变成list[4]'''
-        #billCheckPage.firstPage_check_list[1].click()
-        #billCheckPage.firstPage_check_list[3].click()
-
-        '''切换窗体'''
-        hl = browser.current_window_handle
-        handles = browser.window_handles
-        for i in range(0,len(handles)):
-            if handles[i] != hl:
-                browser.switch_to_window(handles[i])
-                break
-        sleep(1)
-        '''批量操作页'''
-        billCheckPage.secondPage_reject_index.click()
-        billCheckPage.secondPage_rejecttxt_index.send_keys("1234565")
-        billCheckPage.secondPage_verifycode_button.click()
-        billCheckPage.secondPage_verifycode_input.send_keys("123456")
-        billCheckPage.secondPage_next_button.click()
-        sleep(1)
-
-        '''结果页面'''
-        assert '工单审批提交成功' in billCheckPage.thirdPage_result_msg.text
 
 
 if __name__ == '__main__':
